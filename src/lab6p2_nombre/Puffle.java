@@ -5,22 +5,25 @@
  */
 package lab6p2_nombre;
 
+import java.awt.Color;
+
 /**
  *
  * @author gerar
  */
-public class Item {
+public class Puffle {
+    
     private String nombre;
+    private Color color;
     private Object precio;
-    private String tipo;
 
-    public Item() {
+    public Puffle() {
     }
 
-    public Item(String nombre, Object precio, String tipo) {
+    public Puffle(String nombre, Color color, Object precio) {
         this.nombre = nombre;
+        this.color = color;
         this.precio = precio;
-        this.tipo = tipo;
     }
 
     public String getNombre() {
@@ -31,6 +34,14 @@ public class Item {
         this.nombre = nombre;
     }
 
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
     public Object getPrecio() {
         return precio;
     }
@@ -39,18 +50,11 @@ public class Item {
         this.precio = precio;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
     @Override
     public String toString() {
         return  nombre;
     }
+    
     
     
     
