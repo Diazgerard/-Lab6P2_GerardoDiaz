@@ -103,9 +103,17 @@ public class MainFrame extends javax.swing.JFrame {
         jf_jugar = new javax.swing.JFrame();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        tabla5 = new javax.swing.JTable();
         jPanel6 = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        tabla6 = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        tabla7 = new javax.swing.JTable();
         jPanel8 = new javax.swing.JPanel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tabla8 = new javax.swing.JTable();
         jb_sign = new javax.swing.JButton();
         jb_login = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -558,7 +566,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(ff_precioPuf, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Puffle", jPanel3);
@@ -597,6 +605,11 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel22.setText("Probalidad de Exito");
 
         jb_GuadarJuego.setText("Guardad");
+        jb_GuadarJuego.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_GuadarJuegoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -650,7 +663,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(ff_exit, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28)
                         .addComponent(jb_GuadarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Juego", jPanel4);
@@ -677,54 +690,178 @@ public class MainFrame extends javax.swing.JFrame {
         jTabbedPane2.setToolTipText("Item");
         jTabbedPane2.setName("Item"); // NOI18N
 
+        tabla5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Tipo", "Precio"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane6.setViewportView(tabla5);
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 702, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(289, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Items", jPanel5);
+
+        tabla6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Tamanio", "Costo", "X", "Y"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane7.setViewportView(tabla6);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 702, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(161, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Casa", jPanel6);
+
+        tabla7.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Color", "Precio"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane8.setViewportView(tabla7);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 702, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(282, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Mi casa", jPanel7);
+
+        tabla8.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Costo", "Recompensas", "Porcentaje"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane9.setViewportView(tabla8);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 702, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(226, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Juego", jPanel8);
@@ -741,9 +878,9 @@ public class MainFrame extends javax.swing.JFrame {
         jf_jugarLayout.setVerticalGroup(
             jf_jugarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_jugarLayout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addContainerGap(68, Short.MAX_VALUE)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47))
         );
 
         jTabbedPane2.getAccessibleContext().setAccessibleName("Item");
@@ -889,14 +1026,13 @@ public class MainFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this,
                         "Se equivoco de Datos");
                 tf_ingresarUsuario.setText("");
-
+                tf_ingresarContra.setText("");
+                 jd_login.dispose();
             }
         
         }
-        tf_ingresarContra.setText("");
-        tf_ingresarUsuario.setText("");
-        tf_ingresarContra.setText("");
-        jd_login.dispose();
+        
+       
 
     }//GEN-LAST:event_jb_loginGuarMouseClicked
 
@@ -937,6 +1073,10 @@ public class MainFrame extends javax.swing.JFrame {
                 = (DefaultTableModel) tabla1.getModel();
         modelo.addRow(newrow);
         tabla1.setModel(modelo);
+        DefaultTableModel modelo1
+                = (DefaultTableModel) tabla5.getModel();
+        modelo1.addRow(newrow);
+        tabla5.setModel(modelo1);
         
         tf_nombreItem.setText("");
         ff_precioItem.setText("");
@@ -976,6 +1116,10 @@ public class MainFrame extends javax.swing.JFrame {
                 = (DefaultTableModel) tabla2.getModel();
         modelo.addRow(newrow);
         tabla2.setModel(modelo);
+        DefaultTableModel modelo1
+                = (DefaultTableModel) tabla6.getModel();
+        modelo1.addRow(newrow);
+        tabla6.setModel(modelo1);
         
         jt_nombre.setText("");
         ff_tamanio.setText("");
@@ -1015,6 +1159,11 @@ public class MainFrame extends javax.swing.JFrame {
         modelo.addRow(newrow);
         tabla3.setModel(modelo);
         
+         DefaultTableModel modelo1
+                = (DefaultTableModel) tabla7.getModel();
+        modelo1.addRow(newrow);
+        tabla7.setModel(modelo1);
+        
         tf_nombrePuf.setText("");
         jb_colorPuf.setBackground(Color.blue);
         ff_precioPuf.setText("");
@@ -1026,6 +1175,15 @@ public class MainFrame extends javax.swing.JFrame {
     private void jb_loginGuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_loginGuarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jb_loginGuarActionPerformed
+
+    private void jb_GuadarJuegoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_GuadarJuegoMouseClicked
+        // TODO add your handling code here:
+        
+        String nombre;
+        Object costo, recompensas, porcentaje;
+        
+        nombre = tf_nombreJuego.getText();
+    }//GEN-LAST:event_jb_GuadarJuegoMouseClicked
     public void mostrar() {
         jd_sign.setModal(true);
         jd_sign.pack();
@@ -1116,6 +1274,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JButton jb_GuadarJuego;
@@ -1136,6 +1298,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTable tabla2;
     private javax.swing.JTable tabla3;
     private javax.swing.JTable tabla4;
+    private javax.swing.JTable tabla5;
+    private javax.swing.JTable tabla6;
+    private javax.swing.JTable tabla7;
+    private javax.swing.JTable tabla8;
     private javax.swing.JTextField tf_contrasenia;
     private javax.swing.JTextField tf_ingresarContra;
     private javax.swing.JTextField tf_ingresarUsuario;
