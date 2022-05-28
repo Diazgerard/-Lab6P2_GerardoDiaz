@@ -16,8 +16,8 @@ public class Penguino {
     private String contrasenia;
     private String socio;
     private Object dinero;
-    ArrayList<Item> item  = new ArrayList();
-    ArrayList<Casa> casa  = new ArrayList();
+//    ArrayList<Item> item  = new ArrayList();
+//    ArrayList<Casa> casa  = new ArrayList();
 
     public Penguino() {
     }
@@ -61,21 +61,21 @@ public class Penguino {
         this.dinero = dinero;
     }
 
-    public ArrayList<Item> getItem() {
-        return item;
-    }
-
-    public void setItem(ArrayList<Item> item) {
-        this.item = item;
-    }
-
-    public ArrayList<Casa> getCasa() {
-        return casa;
-    }
-
-    public void setCasa(ArrayList<Casa> casa) {
-        this.casa = casa;
-    }
+//    public ArrayList<Item> getItem() {
+//        return item;
+//    }
+//
+//    public void setItem(ArrayList<Item> item) {
+//        this.item = item;
+//    }
+//
+//    public ArrayList<Casa> getCasa() {
+//        return casa;
+//    }
+//
+//    public void setCasa(ArrayList<Casa> casa) {
+//        this.casa = casa;
+//    }
     
     
 }

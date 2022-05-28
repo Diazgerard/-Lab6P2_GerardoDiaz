@@ -187,6 +187,11 @@ public class MainFrame extends javax.swing.JFrame {
                 jb_loginGuarMouseClicked(evt);
             }
         });
+        jb_loginGuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_loginGuarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jd_loginLayout = new javax.swing.GroupLayout(jd_login.getContentPane());
         jd_login.getContentPane().setLayout(jd_loginLayout);
@@ -815,13 +820,25 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jb_guardarsignMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_guardarsignMouseClicked
         // TODO add your handling code here:
-        String usuario, contrasenia;
+        Penguino pen = new Penguino();
+        String usuario, contrasenia, socio;
+        Object  dinero; 
 
         usuario = tf_usuario.getText();
-        Usuario.add(usuario);
-
-        contrasenia = tf_usuario.getText();
-        Contrasenia.add(contrasenia);
+        pen.setUsuario(usuario);
+        
+        contrasenia = tf_contrasenia.getText();
+        pen.setContrasenia(contrasenia);
+        
+        socio = "no";
+        pen.setSocio(socio);
+        dinero = 10000;
+        pen.setDinero(dinero);
+        
+        Penguino peng =  new Penguino(usuario,contrasenia,socio, dinero);
+        Usuario.add(peng);
+        
+        
         JOptionPane.showMessageDialog(this,
                 "Se guardaron los datos");
         tf_usuario.setText("");
@@ -852,22 +869,31 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jb_loginGuarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_loginGuarMouseClicked
         // TODO add your handling code here:
+        String usuario, contra;
+        usuario= tf_ingresarUsuario.getText();
+        contra = tf_ingresarContra.getText();
+        for (int i = 0; i < Usuario.size(); i++) {
+            
+            
+            
+            if (usuario.equals((Usuario.get(i).getUsuario())) && contra.equals(Usuario.get(i).getContrasenia()))  {
+                JOptionPane.showMessageDialog(this,
+                        "ENTRO"); 
+                jf_administracion.setLocationRelativeTo(this);
+                jf_administracion.pack();
+                jf_administracion.setVisible(true);
 
-//            if (tf_ingresarUsuario.getText().equals((String) Usuario.get(0))
-//                    && tf_ingresarContra.getText().equals((String) Contrasenia.get(0))) {
-        jf_administracion.setLocationRelativeTo(this);
-        jf_administracion.pack();
-        jf_administracion.setVisible(true);
+               
 
-//JOptionPane.showMessageDialog(this,
-//                        "ENTRO");
-//
-//            }else{
-//                JOptionPane.showMessageDialog(this,
-//                 "Se equivoco de Datos");
-//                tf_ingresarUsuario.setText("");
-//                tf_ingresarContra.setText("");
-//            }
+            } else {
+                JOptionPane.showMessageDialog(this,
+                        "Se equivoco de Datos");
+                tf_ingresarUsuario.setText("");
+
+            }
+        
+        }
+        tf_ingresarContra.setText("");
         tf_ingresarUsuario.setText("");
         tf_ingresarContra.setText("");
         jd_login.dispose();
@@ -996,6 +1022,10 @@ public class MainFrame extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jb_loginGuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_loginGuarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_loginGuarActionPerformed
     public void mostrar() {
         jd_sign.setModal(true);
         jd_sign.pack();
@@ -1114,8 +1144,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombrePuf;
     private javax.swing.JTextField tf_usuario;
     // End of variables declaration//GEN-END:variables
-    ArrayList<String> Usuario = new ArrayList();
-    ArrayList<String> Contrasenia = new ArrayList();
+    ArrayList<Penguino> Usuario = new ArrayList();
     
     ArrayList<Item> lista = new ArrayList();
     Item seleccionado;
