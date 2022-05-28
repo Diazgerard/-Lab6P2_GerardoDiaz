@@ -111,12 +111,16 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         tabla6 = new javax.swing.JTable();
+        jb_ComprarCasa = new javax.swing.JButton();
+        jb_venderCasa = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
         tabla7 = new javax.swing.JTable();
+        jb_ComprarPuff = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane9 = new javax.swing.JScrollPane();
         tabla8 = new javax.swing.JTable();
+        jb_Jugar = new javax.swing.JButton();
         jb_premium = new javax.swing.JButton();
         jb_sign = new javax.swing.JButton();
         jb_login = new javax.swing.JButton();
@@ -805,21 +809,41 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jScrollPane7.setViewportView(tabla6);
 
+        jb_ComprarCasa.setText("Comprar Casa");
+        jb_ComprarCasa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_ComprarCasaMouseClicked(evt);
+            }
+        });
+
+        jb_venderCasa.setText("Vender Casa");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(jb_ComprarCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(130, 130, 130)
+                        .addComponent(jb_venderCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_ComprarCasa, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                    .addComponent(jb_venderCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addGap(100, 100, 100))
         );
 
         jTabbedPane2.addTab("Casa", jPanel6);
@@ -849,21 +873,30 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jScrollPane8.setViewportView(tabla7);
 
+        jb_ComprarPuff.setText("Comprar Puff");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(304, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(jb_ComprarPuff, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(126, 126, 126))))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jb_ComprarPuff, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66))
         );
 
         jTabbedPane2.addTab("Mi casa", jPanel7);
@@ -893,13 +926,20 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jScrollPane9.setViewportView(tabla8);
 
+        jb_Jugar.setText("Jugar");
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jb_Jugar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
@@ -907,7 +947,9 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(274, Short.MAX_VALUE))
+                .addGap(56, 56, 56)
+                .addComponent(jb_Jugar, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Juego", jPanel8);
@@ -1074,7 +1116,7 @@ public class MainFrame extends javax.swing.JFrame {
                 jf_administracion.setLocationRelativeTo(this);
                 jf_administracion.pack();
                 jf_administracion.setVisible(true);
-
+                jd_login.dispose();
                
 
             } else {
@@ -1273,13 +1315,16 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
         
-        if (tabla1.getSelectedRow() >= 0) {
+        if (tabla5.getSelectedRow() >= 0) {
             DefaultTableModel modelo
-                    = (DefaultTableModel) tabla1.getModel();
-            modelo.getValueAt(tabla1.getSelectedRow(), 3);
+                    = (DefaultTableModel) tabla5.getModel();
+
+            modelo.getValueAt(tabla5.getSelectedRow(), tabla5.getSelectedColumn());
+            modelo.removeRow(tabla5.getSelectedRow());
+            tabla5.setModel(modelo);
             Object[] newrow = {
-            modelo.getValueAt(tabla1.getSelectedRow(), 1),
-            modelo.getValueAt(tabla1.getSelectedRow(), 2)
+                
+                tabla5.getSelectedRows()
             };
             DefaultTableModel modelo1
                     = (DefaultTableModel) tabla9.getModel();
@@ -1289,6 +1334,11 @@ public class MainFrame extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jb_ComprarCasaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ComprarCasaMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jb_ComprarCasaMouseClicked
     public void mostrar() {
         jd_sign.setModal(true);
         jd_sign.pack();
@@ -1387,15 +1437,19 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JButton jb_ComprarCasa;
+    private javax.swing.JButton jb_ComprarPuff;
     private javax.swing.JButton jb_GuadarJuego;
     private javax.swing.JButton jb_GuardarCasa;
     private javax.swing.JButton jb_GuardarItem;
+    private javax.swing.JButton jb_Jugar;
     private javax.swing.JButton jb_colorPuf;
     private javax.swing.JButton jb_guardarsign;
     private javax.swing.JButton jb_login;
     private javax.swing.JButton jb_loginGuar;
     private javax.swing.JButton jb_premium;
     private javax.swing.JButton jb_sign;
+    private javax.swing.JButton jb_venderCasa;
     private javax.swing.JDialog jd_login;
     private javax.swing.JDialog jd_sign;
     private javax.swing.JFrame jf_admin1;
